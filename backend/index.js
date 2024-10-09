@@ -12,7 +12,9 @@ const port = process.env.PORT;
 const app = express();
 
 // Enable CORS for all routes
-app.use(cors());
+app.use(cors({
+  origin: 'https://foodie24venkat.netlify.app' 
+}));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
